@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/generuj}" th:object="${card}" method="post">
+    <p>CharacterName: <input type="text" th:field="*{characterName}"/></p>
+    <p>Race: <input type="text" th:field="*{race}"/></p>
+
+    <p>WW: <input type="number" th:field="*{WW}"/></p>
+    <p>US: <input type="number" th:field="*{US}"/></p>
+    <p>KR: <input type="number" th:field="*{KR}"/></p>
+    <p>ODP: <input type="number" th:field="*{ODP}"/></p>
+    <p>ZR: <input type="number" th:field="*{ZR}"/></p>
+    <p>SW: <input type="number" th:field="*{SW}"/></p>
+    <p>OGD: <input type="number" th:field="*{OGD}"/></p>
+    <p>ATAK: <input type="number" th:field="*{ATAK}"/></p>
+    <p>ZYW: <input type="number" th:field="*{ZYW}"/></p>
+    <p>SIL: <input type="number" th:field="*{SIL}"/></p>
+    <p>WYT: <input type="number" th:field="*{WYT}"/></p>
+    <p>SZ: <input type="number" th:field="*{SZ}"/></p>
+    <p>MAG: <input type="number" th:field="*{MAG}"/></p>
+    <p>PO: <input type="number" th:field="*{PO}"/></p>
+    <p>PP: <input type="number" th:field="*{PP}"/></p>
+
+    <p><input type="submit" value="Dodaj"/> <input type="reset" value="Resetuj"/></p>
+    <a href="/">Powrót do strony głównej</a>
+</form>
+</body>
+</html>

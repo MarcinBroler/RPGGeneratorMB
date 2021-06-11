@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zobacz karty</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <td>ID</td>
+    <td>CharacterName</td>
+    <td>Race</td>
+    <td>WW</td>
+    <td>US</td>
+    <td>KR</td>
+    <td>ODP</td>
+    <td>ZR</td>
+    <td>SW</td>
+    <td>OGD</td>
+    <td>ATAK</td>
+    <td>ZYW</td>
+    <td>SIL</td>
+    <td>WYT</td>
+    <td>SZ</td>
+    <td>MAG</td>
+    <td>PO</td>
+    <td>PP</td>
+    </thead>
+    <tr th:each="card: ${cards}">
+        <td><a th:href="@{/karta/{id}(id=${card.id})}">[[${card.id}]]</a></td>
+        <td th:text="${card.characterName}"/>
+        <td th:text="${card.race}"/>
+        <td th:text="${card.WW}"/>
+        <td th:text="${card.US}"/>
+        <td th:text="${card.KR}"/>
+        <td th:text="${card.ODP}"/>
+        <td th:text="${card.ZR}"/>
+        <td th:text="${card.SW}"/>
+        <td th:text="${card.OGD}"/>
+        <td th:text="${card.ATAK}"/>
+        <td th:text="${card.ZYW}"/>
+        <td th:text="${card.SIL}"/>
+        <td th:text="${card.WYT}"/>
+        <td th:text="${card.SZ}"/>
+        <td th:text="${card.MAG}"/>
+        <td th:text="${card.PO}"/>
+        <td th:text="${card.PP}"/>
+    </tr>
+</table>
+<a href="/">Powrót do strony głównej</a>
+<a href="/generuj">Dodaj nową kartę</a>
+</body>
+</html>

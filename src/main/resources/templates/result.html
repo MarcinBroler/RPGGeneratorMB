@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Handling Form Submission</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Result:</h2>
+<p th:text="'ID:' + ${card.id}"/>
+<p th:text="'Character Name: ' + ${card.characterName}"/>
+<p th:text="'Race: ' + ${card.race}"/>
+<p th:text="'WW: ' + ${card.WW}"/>
+<p th:text="'US: ' + ${card.US}"/>
+<p th:text="'KR: ' + ${card.KR}"/>
+<p th:text="'ODP: ' + ${card.ODP}"/>
+<p th:text="'ZR: ' + ${card.ZR}"/>
+<p th:text="'SW: ' + ${card.SW}"/>
+<p th:text="'OGD: ' + ${card.OGD}"/>
+<p th:text="'ATAK: ' + ${card.ATAK}"/>
+<p th:text="'ZYW: ' + ${card.ZYW}"/>
+<p th:text="'SIL: ' + ${card.SIL}"/>
+<p th:text="'WYT: ' + ${card.WYT}"/>
+<p th:text="'SZ: ' + ${card.SZ}"/>
+<p th:text="'MAG: ' + ${card.MAG}"/>
+<p th:text="'PO: ' + ${card.PO}"/>
+<p th:text="'PP: ' + ${card.PP}"/>
+
+<a href="/generuj">Dodaj nową kartę</a>
+<a href="/zobacz">Zobacz dodane karty</a>
+
+</body>
+</html>
