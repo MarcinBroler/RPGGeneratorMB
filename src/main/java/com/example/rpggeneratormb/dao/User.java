@@ -1,38 +1,93 @@
 package com.example.rpggeneratormb.dao;
 
-public class User {
-    public String getName() {
-        return name;
+import org.springframework.data.annotation.Id;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import java.util.Collection;
+import java.util.Collections;
+
+@Entity
+public class User implements UserDetails {
+
+    @javax.persistence.Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String username;
+    private String password;
+    private String role;
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return Collections.singleton(new SimpleGrantedAuthority(role));
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    /*public User() {
+        this.username = username;
+        this.password = password;
+        this.role = role;
+    }*/
+
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
     }
 
-    private String name;
-    private String surname;
-    private int id;
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
 
-    public int getId() {
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
-
-    public String getSurname() {
-        return surname;
+    @Override
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setSurname(String surname) {
-        this.surname = surname;
+
+
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
 
-    public User(int id, String name, String surname) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-    }
 }

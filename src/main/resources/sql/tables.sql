@@ -7,6 +7,7 @@ CREATE TABLE CharacterWH (
     K int,
     ODP int,
     ZR int,
+    INTe int,
     SW int,
     OGD int,
     ATAK int,

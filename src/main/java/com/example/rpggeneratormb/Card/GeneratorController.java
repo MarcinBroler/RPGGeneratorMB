@@ -12,14 +12,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class GeneratorController {
     @Autowired
     ICardsRepository cardsRepository;
-
+/*tu są wyświetlane wartości pierwotne karty */
     @GetMapping(value = "/generuj")
     public String getDataUser(Model model){
-        Card card = new Card("Insert name", "Insert race",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
+        Card card = new Card("Insert name", "Insert race",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);
         model.addAttribute("card", card);
         return "generuj";
     }
-
+/*Tu się wyświetla podstrona z efektem zapisu */
     @PostMapping(value = "/generuj")
     public String getDataStats(@ModelAttribute Card card, ModelAndView model){
         model.addObject("card", card);

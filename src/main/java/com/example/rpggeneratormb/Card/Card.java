@@ -20,6 +20,7 @@ public class Card {
                 ", KR=" + KR +
                 ", ODP=" + ODP +
                 ", ZR=" + ZR +
+                ", INT=" + INTe +
                 ", SW=" + SW +
                 ", OGD=" + OGD +
                 ", ATAK=" + ATAK +
@@ -40,6 +41,7 @@ public class Card {
     private int KR;
     private int ODP;
     private int ZR;
+    private int INTe;
     private int SW;
     private int OGD;
     private int ATAK;
@@ -52,7 +54,7 @@ public class Card {
     private int PP;
 
 
-    public Card(String characterName, String race, int WW, int US, int KR, int ODP, int ZR, int SW, int OGD, int ATAK, int ZYW, int SIL, int WYT, int SZ, int MAG, int PO, int PP/*, String attributes*/) {
+    public Card(String characterName, String race, int WW, int US, int KR, int ODP, int ZR,int INTe, int SW, int OGD, int ATAK, int ZYW, int SIL, int WYT, int SZ, int MAG, int PO, int PP/*, String attributes*/) {
         this.characterName = characterName;
         this.race = race;
         this.WW = WW;
@@ -60,6 +62,7 @@ public class Card {
         this.KR = KR;
         this.ODP = ODP;
         this.ZR = ZR;
+        this.INTe = INTe;
         this.SW = SW;
         this.OGD = OGD;
         this.ATAK = ATAK;
@@ -139,6 +142,10 @@ public class Card {
     public void setZR(int ZR) {
         this.ZR = ZR;
     }
+
+    public int getINTe() { return INTe;}
+
+    public void setINTe(int INTe) { this.INTe = INTe; }
 
     public int getSW() {
         return SW;

@@ -12,7 +12,7 @@ public  int TenX2() {
 
     public int[] StatyHumanWH() {
         Kostki kostki = new Kostki();
-        int[] table = new int[8];
+        int[] table = new int[7];
         for (int a = 0; a < table.length; a++)
             table[a] = kostki.TenX2() + 20;
         return table;

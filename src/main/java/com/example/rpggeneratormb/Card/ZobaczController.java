@@ -1,4 +1,4 @@
-package com.example.rpggeneratormb;
+package com.example.rpggeneratormb.Card;
 
 import com.example.rpggeneratormb.Card.Card;
 import com.example.rpggeneratormb.Card.ICardsRepository;
@@ -15,7 +15,7 @@ public class ZobaczController {
     @Autowired
     ICardsRepository cardsRepository;
 
-    private static final Logger logger = LoggerFactory.getLogger(Card.class);
+    //private static final Logger logger = LoggerFactory.getLogger(Card.class);
 
     @GetMapping(value = "/zobacz")
     public String getCards(Model model){

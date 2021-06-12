@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Getting Started: Serving Web Content</title>
+    <title>Generator Kart Postaci Warhammer edycja 2</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 </head>
 <body>
-<h1>Form</h1>
+<h1>Karta Postaci</h1>
 <form action="#" th:action="@{/generuj}" th:object="${card}" method="post">
     <p>CharacterName: <input type="text" th:field="*{characterName}"/></p>
     <p>Race: <input type="text" th:field="*{race}"/></p>
@@ -16,6 +16,7 @@
     <p>ODP: <input type="number" th:field="*{ODP}"/></p>
     <p>ZR: <input type="number" th:field="*{ZR}"/></p>
     <p>SW: <input type="number" th:field="*{SW}"/></p>
+    <p>INT: <input type="number" th:field="*{INTe}"/></p>
     <p>OGD: <input type="number" th:field="*{OGD}"/></p>
     <p>ATAK: <input type="number" th:field="*{ATAK}"/></p>
     <p>ZYW: <input type="number" th:field="*{ZYW}"/></p>
@@ -26,7 +27,7 @@
     <p>PO: <input type="number" th:field="*{PO}"/></p>
     <p>PP: <input type="number" th:field="*{PP}"/></p>
 
-    <p><input type="submit" value="Dodaj"/> <input type="reset" value="Resetuj"/></p>
+    <p><input type="submit" value="Dodaj"/> <input type="reset" value="Resetuj"/> <input type="button" value="Generuj"></p>
     <a href="/">Powrót do strony głównej</a>
 </form>
 </body>
