@@ -26,4 +26,5 @@ public class GeneratorController {
         cardsRepository.save(card);
         return "result";
     }
+
 }

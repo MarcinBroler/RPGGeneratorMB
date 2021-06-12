@@ -14,6 +14,7 @@ import java.util.Collections;
 @Entity
 public class User implements UserDetails {
 
+
     @javax.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,23 +39,24 @@ public class User implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
+
     public Long getId() {
         return id;
     }
@@ -62,6 +64,7 @@ public class User implements UserDetails {
     public void setId(Long id) {
         this.id = id;
     }
+
     @Override
     public String getUsername() {
         return username;
@@ -69,8 +72,6 @@ public class User implements UserDetails {
     public void setUsername(String username) {
         this.username = username;
     }
-
-
 
     @Override
     public String getPassword() {
@@ -89,5 +90,13 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
 }

@@ -1,22 +1,30 @@
 package com.example.rpggeneratormb.dao;
 
-import com.example.rpggeneratormb.dao.User;
-import com.example.rpggeneratormb.dao.UserRepo;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class Start {
 
-    private UserRepo UserRepo;
+    private UserRepo userRepo;
 
     public Start (UserRepo userRepo, PasswordEncoder passwordEncoder){
-        this.UserRepo = UserRepo;
+        this.userRepo = userRepo;
 
-        User user = new User();
-        user.setUsername("Marcin");
-        user.setPassword(passwordEncoder.encode("Broler123"));
-        user.setRole("ROLE_ADMIN");
-        userRepo.save(user);
+        User userAdmin = new User();
+        userAdmin.setUsername("Marcin");
+        userAdmin.setPassword(passwordEncoder.encode("Broler123"));
+        userAdmin.setRole("ROLE_ADMIN");
+
+        User userUser = new User();
+        userUser.setUsername("Marys");
+        userUser.setPassword(passwordEncoder.encode("Marys123"));
+        userUser.setRole("ROLE_USER");
+
+
+        userRepo.save(userAdmin);
+        userRepo.save(userUser);
+
     }
 }
